@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "memoryrouter",
+  "description": "Persistent memory plugins for Claude Code, Claude Cowork, and claude.ai, backed by the hosted MemoryRouter MCP connector.",
+  "version": "2.0.1",
+  "owner": {
+    "name": "MemoryRouter",
+    "email": "hello@memoryrouter.ai",
+    "url": "https://memoryrouter.ai"
+  },
+  "plugins": [
+    {
+      "name": "memoryrouter",
+      "displayName": "MemoryRouter",
+      "source": "./plugins/memoryrouter",
+      "description": "Portable long-term memory with explicit personal, project, and organization scopes; includes recall, remember, status, forget, scope, and vault workflows.",
+      "version": "2.0.1",
+      "category": "productivity",
+      "author": {
+        "name": "MemoryRouter",
+        "email": "hello@memoryrouter.ai"
+      },
+      "homepage": "https://memoryrouter.ai",
+      "repository": "https://github.com/John-Rood/memoryrouter-claude-plugin",
+      "license": "MIT",
+      "keywords": ["memory", "persistent-memory", "mcp", "cowork", "context", "recall"]
+    },
+    {
+      "name": "memoryrouter-readonly",
+      "displayName": "MemoryRouter (Read Only)",
+      "source": "./plugins/memoryrouter-readonly",
+      "description": "Least-privilege MemoryRouter recall for Claude with OAuth pinned to memories:read and no write or delete workflows.",
+      "version": "2.0.1",
+      "category": "productivity",
+      "author": {
+        "name": "MemoryRouter",
+        "email": "hello@memoryrouter.ai"
+      },
+      "homepage": "https://memoryrouter.ai",
+      "repository": "https://github.com/John-Rood/memoryrouter-claude-plugin",
+      "license": "MIT",
+      "keywords": ["memory", "read-only", "least-privilege", "mcp", "cowork"]
+    }
+  ]
+}

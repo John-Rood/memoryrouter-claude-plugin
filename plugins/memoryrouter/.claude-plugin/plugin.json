@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "memoryrouter",
+  "displayName": "MemoryRouter",
+  "description": "Portable long-term memory for Claude with explicit personal, project, and organization scopes.",
+  "version": "2.0.1",
+  "author": {
+    "name": "MemoryRouter",
+    "email": "hello@memoryrouter.ai"
+  },
+  "homepage": "https://memoryrouter.ai",
+  "repository": "https://github.com/John-Rood/memoryrouter-claude-plugin",
+  "license": "MIT",
+  "keywords": ["memory", "persistent-memory", "mcp", "cowork", "recall"],
+  "defaultEnabled": true
+}

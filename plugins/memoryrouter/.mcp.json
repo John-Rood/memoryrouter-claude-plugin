@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "memoryrouter": {
+      "type": "http",
+      "url": "https://mcp.memoryrouter.ai/mcp",
+      "oauth": {
+        "scopes": "memories:read memories:write"
+      },
+      "timeout": 45000
+    }
+  }
+}
