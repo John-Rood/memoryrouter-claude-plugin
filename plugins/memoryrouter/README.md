@@ -1,6 +1,8 @@
+![MemoryRouter](assets/icon.png)
+
 # MemoryRouter for Claude
 
-Claude starts every session cold: it forgets what you told it yesterday and loses context after compaction. MemoryRouter gives Claude one persistent memory vault that also works with ChatGPT, Cursor, Codex, and any MCP client. 14 days free, then $20 a month, cancel anytime.
+Claude loses context across sessions and after compaction. MemoryRouter gives Claude one persistent memory vault that also works with ChatGPT, Cursor, Codex, and any MCP client, so decisions you save in one tool are there in the next. 14 days free, then $20 a month, cancel anytime.
 
 Portable long-term memory for Claude Cowork, claude.ai chat, and Claude Code through the hosted MemoryRouter MCP connector. This plugin bundles the connector plus explicit workflows for recall, capture, status, deletion, logical scope, and OAuth vault selection.
 
@@ -46,4 +48,19 @@ The current MemoryRouter Cowork package installs no deterministic Claude Code-st
 
 The production MCP server supports `2026-07-28` `server/discover` plus handshake-era protocol versions. Its current catalog includes `search_memories`, `date_search_memories`, `inspect_memory`, `store_memory`, `memory_status`, `delete_memories`, `forget_all_memories`, the reflection tools, and the `search` compatibility alias, plus vault stats/recent resources. Deletion tools require the separate `memories:delete` scope, which this plugin does not request. The server has no native project handles. This package uses exact scope envelopes as behavioral filtering; strict isolation requires separate OAuth-selected vaults.
 
-See `INSTALL.md` and `COMPATIBILITY.md`.
+## What this plugin runs, sends, and fetches
+
+- No hooks, scripts, binaries, or package installs. The plugin is one `.mcp.json` connector entry plus Markdown skills.
+- The only network endpoint is `https://mcp.memoryrouter.ai/mcp`, reached by Claude's MCP client after OAuth at `https://auth.memoryrouter.ai`.
+- Data sent: the search query when Claude recalls, and the memory text when you ask Claude to remember something. Nothing is captured in the background.
+- OAuth scopes requested: `memories:read memories:write`. Never `memories:delete`.
+
+## Links
+
+- Website: https://memoryrouter.ai/claude-code
+- Docs: https://docs.memoryrouter.ai/mcp
+- Privacy: https://memoryrouter.ai/privacy
+- Terms: https://memoryrouter.ai/terms
+- Support: https://memoryrouter.ai/support or hello@memoryrouter.ai
+
+See `INSTALL.md` and `COMPATIBILITY.md`. License: MIT.

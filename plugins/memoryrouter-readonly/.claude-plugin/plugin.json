@@ -3,14 +3,23 @@
   "name": "memoryrouter-readonly",
   "displayName": "MemoryRouter (Read Only)",
   "description": "Least-privilege portable recall with OAuth pinned to memories:read and no write workflows.",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": {
     "name": "MemoryRouter",
-    "email": "hello@memoryrouter.ai"
+    "email": "hello@memoryrouter.ai",
+    "url": "https://memoryrouter.ai"
   },
-  "homepage": "https://memoryrouter.ai",
+  "homepage": "https://memoryrouter.ai/claude-code",
   "repository": "https://github.com/John-Rood/memoryrouter-claude-plugin",
   "license": "MIT",
-  "keywords": ["memory", "read-only", "least-privilege", "mcp", "cowork"],
+  "keywords": [
+    "memory",
+    "read-only",
+    "least-privilege",
+    "mcp",
+    "claude-code",
+    "cowork",
+    "recall"
+  ],
   "defaultEnabled": true
 }
