@@ -3,7 +3,7 @@
   "name": "memoryrouter-readonly",
   "displayName": "MemoryRouter (Read Only)",
   "description": "Least-privilege portable recall with OAuth pinned to memories:read and no write workflows.",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "author": {
     "name": "MemoryRouter",
     "email": "hello@memoryrouter.ai",

@@ -22,7 +22,7 @@ Then run `/mcp` and complete MemoryRouter OAuth. The plugin connects to `https:/
 1. Install and enable the plugin.
 2. Claude opens MemoryRouter OAuth. Sign in with GitHub or Google and choose a vault.
 3. Set a scope in the conversation: `/memoryrouter:memory-scope personal` or `/memoryrouter:memory-scope project <handle>`.
-4. Start with “Use MemoryRouter to show the profile I transferred from ChatGPT, then continue from there.” Then ask Claude explicitly to check MemoryRouter whenever recall matters. Ask it to remember a concise fact, or approve an exact memory it proposes, before any save.
+4. Start with “Use MemoryRouter to show the profile I transferred from ChatGPT, then continue from there.” The bundled skill tells Claude to search MemoryRouter before responding to each new message and to save useful details after it. You can also ask directly, and Claude may ask you to confirm each save.
 
 ## Commands
 
@@ -44,7 +44,7 @@ This plugin pins OAuth to `memories:read memories:write`. Use the separate `memo
 
 ## Important platform limit
 
-The current MemoryRouter Cowork package installs no deterministic Claude Code-style prompt/stop/compaction capture hook. The model still chooses whether and when to call connector tools, so recall and saving are not guaranteed on every turn. Saving requires an explicit user request or explicit approval of the exact concise memory.
+The current MemoryRouter Cowork package installs no deterministic Claude Code-style prompt/stop/compaction capture hook. The model still chooses whether and when to call connector tools, so recall and saving are not guaranteed on every turn. The skill asks Claude to search before each new message and save useful details after it; Claude may ask you to confirm each save, and credentials are never saved.
 
 The production MCP server supports `2026-07-28` `server/discover` plus handshake-era protocol versions. Its current catalog includes `search_memories`, `date_search_memories`, `inspect_memory`, `store_memory`, `memory_status`, `delete_memories`, `forget_all_memories`, the reflection tools, and the `search` compatibility alias, plus vault stats/recent resources. Deletion tools require the separate `memories:delete` scope, which this plugin does not request. The server has no native project handles. This package uses exact scope envelopes as behavioral filtering; strict isolation requires separate OAuth-selected vaults.
 

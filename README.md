@@ -50,7 +50,7 @@ Open **Customize > Plugins > Add** and upload a ZIP of the plugin folder (`plugi
 
 - `/memoryrouter:memory-scope personal` or `/memoryrouter:memory-scope project <handle>` sets the scope for the conversation.
 - `/memoryrouter:recall <topic>` searches the vault and shows where each result came from.
-- `/memoryrouter:remember <fact>` saves one concise memory after you ask or approve it.
+- `/memoryrouter:remember <fact>` saves one concise memory right away. Outside the command, the skill saves useful details after each message.
 - `/memoryrouter:memory-status` reports the connection, vault, and scope.
 - `/memoryrouter:memory-help` explains usage and limits.
 

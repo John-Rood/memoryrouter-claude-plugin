@@ -3,7 +3,7 @@
   "name": "memoryrouter",
   "displayName": "MemoryRouter",
   "description": "Portable long-term memory for Claude with explicit personal, project, and organization scopes.",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "author": {
     "name": "MemoryRouter",
     "email": "hello@memoryrouter.ai",

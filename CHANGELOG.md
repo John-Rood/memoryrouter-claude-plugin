@@ -2,6 +2,11 @@
 
 All notable changes to this marketplace and its plugins are documented here. Versions follow [Semantic Versioning](https://semver.org/).
 
+## 2.1.0 (2026-11-04)
+
+- The memory skill now carries MemoryRouter's universal "when to use memory" instructions, the same text the hosted MCP server sends every client: search before responding to each new message, save useful details after it, and never mention either unless asked. Read-only installs follow the retrieve half only.
+- Mapped the instructions to the real tools: `search_memories` with all tiers by default, `inspect_memory` for sources, `date_search_memories` for time windows, `store_memory` one memory per call (there is no update tool). Credentials and sensitive identifiers are never saved, and Claude can ask you to confirm each save.
+
 ## 2.0.2 (2026-09-26)
 
 - Added a MemoryRouter icon to the marketplace and to each plugin folder.
